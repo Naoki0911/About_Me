@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile'
   get 'skills', to: 'pages#skills'
   get 'hobbies', to: 'pages#hobbies'
+
+  resources :blogs, only: [:index, :show]
+  namespace :admin do
+    resources :blogs
+  end
 end

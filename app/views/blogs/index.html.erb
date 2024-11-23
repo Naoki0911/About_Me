@@ -1,0 +1,11 @@
+<h1>Blog Posts</h1>
+<ul>
+  <% @blogs.each do |blog| %>
+    <li>
+      <a href="<%= blog_path(blog) %>"><%= blog.title %></a>
+      <% if blog.image.attached? %>
+        <%= image_tag blog.image.variant(resize_to_limit: [100, 100]) %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
