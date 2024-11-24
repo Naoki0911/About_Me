@@ -1,0 +1,11 @@
+<h1>Manage Blogs</h1>
+<a href="<%= new_admin_blog_path %>">New Blog</a>
+<ul>
+  <% @blogs.each do |blog| %>
+    <li>
+      <%= blog.title %>
+      <%= link_to 'Edit', edit_admin_blog_path(blog) %>
+      <%= link_to 'Delete', admin_blog_path(blog), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
