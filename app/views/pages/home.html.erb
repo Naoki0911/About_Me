@@ -3,27 +3,73 @@
 <head>
   <title>My Homepage</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-    .buttons { margin-top: 20px; }
-    .button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .button:hover { background-color: #2980b9; }
+  
   </style>
+  <link rel="stylesheets" href="home.css">
 </head>
 <body>
-  <h1>Welcome to My Homepage</h1>
-  <div class="buttons">
-    <a href="/profile" class="button">About Me</a>
-    <a href="/skills" class="button">Hobbies</a>
-    <a href="/blogs" class="button">Blog</a>
-    <a href="/hobbies" class="button">Contact</a>
+  <header>
+    <div class="container">
+      <div class="header-left">About Me</div>
+    </div>
+  </header>
+  <div class="top-wrapper">
+    <div class="container">
+      <h1>About Meへようこそ</h1>
+      <h1>Once in the Lifetime Chance</h1>
+      <p>Once in the Lifetime Chanceとは「一つ一つの出会いを大切に」という意味が込められたフレーズです</p>
+      <p>このサイトを訪れてくれた貴方と良いご縁がありますように</p>
+    </div>
   </div>
+  <div class="about-wrapper">
+    <div class="container">
+      <h1>My Profile</h1>
+      <%= image_tag 'IMG_6380.jpg', alt: 'My Profile Picture', class: "profile-image" %>
+      <div class="profile-text">
+        <div class="profile-text-01">
+          <ul>
+            <li>氏名</li>
+            <li>生年月日</li>
+            <li>出身地</li>
+            <li>座右の銘</li>      
+          </ul>
+          <ul>
+            <li>伴直樹</li>
+            <li>1994年 9月 11日</li>
+            <li>福岡県 福岡市</li>
+            <li>答えは常に踏み出した先にある</li>      
+          </ul>
+        </div>
+        <div class="profile-text-02">
+        <p>一言</p>
+        <p>初めまして</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="details">
+    <div class="container">
+      <h1>詳細</h1>
+      <div class="buttons">
+        <a href="/profile" class="image-button profile">
+          <span>経歴</span>
+        </a>
+        <a href="/skills" class="image-button skills">
+          <span>スキル</span>
+        </a>
+        <a href="/hobbies" class="image-button hobbies">
+          <span>趣味</span>
+        </a>
+        <a href="/blogs" class="image-button blogs">
+          <span>日記</span>
+        </a>
+      </div>
+    </div>
+</div>
+
+
+
 </body>
 </html>

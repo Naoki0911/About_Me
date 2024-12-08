@@ -1,0 +1,142 @@
+header {
+  background-color: rgba(34, 49, 52, 0.9);
+  width: 100%;
+  height: 40px;
+}
+
+.container {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header-left {
+  float: left;
+  padding-top: 10px;
+  color: aliceblue;
+}
+
+body {
+  margin: 0;
+}
+
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-image: url(https://prog-8.com/images/html/advanced/top.png);
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 45px;
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+}
+
+.about-wrapper {
+  height: 320px;
+  padding-bottom: 80px;
+  background-color: #ffffff;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+.profile-text {
+  float: left
+}
+
+ul {
+  padding-left: 100px;
+  float: left;
+}
+
+li {
+  list-style: none;
+}
+
+.profile-text-02 {
+  padding-left: 100px;
+}
+
+/* 全体コンテナの設定 */
+.buttons {
+  display: flex; /* 横並びに配置 */
+  gap: 20px; /* ボタン間のスペース */
+  justify-content: center; /* 中央揃え */
+  flex-wrap: wrap; /* 必要に応じて折り返す */
+}
+
+/* 各画像ボタンの基本設定 */
+.image-button {
+  position: relative;
+  display: inline-block;
+  height: 275px;
+  width: 275px;
+  text-align: center;
+  text-decoration: none; /* リンク下線を削除 */
+  color: white; /* テキストの色 */
+  font-size: 16px; /* フォントサイズ */
+  font-weight: bold;
+  line-height: 100px; /* 垂直方向中央揃え */
+  overflow: hidden; /* コンテンツがはみ出た場合に非表示 */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+/* 各画像ボタンのホバー時の動作 */
+.image-button:hover {
+  transform: scale(1.05); /* ホバー時に拡大 */
+  cursor: pointer;
+}
+
+/* オーバーレイ効果 */
+.image-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明の黒いオーバーレイ */
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.image-button:hover::after {
+  background-color: rgba(0, 0, 0, 0.2); /* ホバー時にオーバーレイを薄くする */
+}
+
+/* テキストを中央に配置 */
+.image-button span {
+  position: relative;
+  z-index: 2; /* オーバーレイより上に表示 */
+}
+
+/* 各ボタンに異なる背景画像を設定 */
+.image-button.profile {
+  background: url('/assets/career.jpg') no-repeat center center / cover;
+}
+
+.image-button.skills {
+  background: url('/assets/skill.jpg') no-repeat center center / cover;
+}
+
+.image-button.hobbies {
+  background: url('/assets/hobby.jpg') no-repeat center center / cover;
+}
+
+.image-button.blogs {
+  background: url('/assets/blog.jpg') no-repeat center center / cover;
+}
+
+h1 {
+  text-align: center;
+}
