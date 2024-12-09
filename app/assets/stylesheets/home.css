@@ -204,3 +204,15 @@ h1 {
   text-decoration: none; /* 下線を削除 */
   font-weight: bold;
 }
+
+/* ブログの詳細ページ */
+
+.blog-show-image {
+  display: block; /* ブロック要素に変換 */
+  margin: 0 auto; /* 左右を自動で中央揃え */
+}
+
+.blog-container {
+  width: 700px;
+  margin: 0 auto;
+}
