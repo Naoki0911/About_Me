@@ -1,11 +1,16 @@
 <h1>Blog Posts</h1>
-<ul>
-  <% @blogs.each do |blog| %>
-    <li>
-      <a href="<%= blog_path(blog) %>"><%= blog.title %></a>
-      <% if blog.image.attached? %>
-        <%= image_tag blog.image.variant(resize_to_limit: [100, 100]) %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <ul>
+    <% @blogs.each do |blog| %>
+      <li class="blog-item">
+        <% if blog.image.attached? %>
+          <%= image_tag blog.image.variant(resize_to_limit: [200, 200]), class: "blog-image" %>
+        <% else %>
+          <%= image_tag 'no-image.png', alt: 'No Image', class: "no-image" %>
+        <% end %>
+        <a href="<%= blog_path(blog) %>" class="blog-title"><%= blog.title %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>
+

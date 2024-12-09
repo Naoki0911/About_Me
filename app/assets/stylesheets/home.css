@@ -178,3 +178,29 @@ h1 {
   font-size: 16px;
   color: #333;
 }
+
+/* ブログページ */
+
+
+/* 親要素をflexboxに設定 */
+.blog-item {
+  display: flex; /* 子要素を横並びに */
+  align-items: center; /* 縦方向に中央揃え */
+  margin-bottom: 20px; /* 各ブログ間にスペースを追加 */
+}
+
+/* 画像のスタイル */
+.blog-image, .no-image {
+  width: 200px;
+  height: 130px;
+  object-fit: cover; /* 画像を枠内に収める */
+  margin-right: 20px; /* 画像とタイトルの間にスペース */
+}
+
+/* タイトルのスタイル */
+.blog-title {
+  font-size: 50px; /* タイトルの文字サイズ */
+  color: #333; /* テキストの色 */
+  text-decoration: none; /* 下線を削除 */
+  font-weight: bold;
+}
